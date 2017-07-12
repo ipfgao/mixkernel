@@ -8,13 +8,19 @@
 ## linux内核源代码的获取
    1、主线内核：到 https://www.kernel.org/ 下载
          或者：git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git  
+   
    2、安卓内核：git clone https://android.googlesource.com/kernel/x86_64
+
    3、安卓X86内核：git clone git://git.code.sf.net/p/android-x86/kernel android-x86-kernel
+   
    4、用git checkout切换到你需要的分支上，以安卓X86内核kernel-4.9分支为例：
+   ```
    cd android-x86-kernel
    git checkout kernel-4.9
+   ```
 ## 内核配置
 为了保证能启动标准Linux桌面系统，以Ubuntu为例，采用Ubuntu系统内核的config配置文件为基础，添加配置安卓x86所必须驱动。
+
 **安卓必须驱动：
 ```
     CONFIG_ANDROID=y
